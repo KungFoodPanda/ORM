@@ -12,24 +12,13 @@ namespace ORM.Presentation
 {
     public class Display
     {
-        private ProductBusiness productBusiness = new ProductBusiness();
-        private void Show()
-        {
-            Console.WriteLine(new string('-',40));
-            Console.WriteLine(new string(' ',18)+"Menu"+new string(' ',18));
-            Console.WriteLine(new string('-', 40));
-            Console.WriteLine("1. List All entries");
-            Console.WriteLine("2. Add new Entry");
-            Console.WriteLine("3. Delete Entry by ID");
-            Console.WriteLine("4. Exit");
-        }
+        private ProductBusiness productBusiness = new ProductBusiness()
 
         public void Input()
         {
             var operation = -1;
             do
             {
-                Show();
                 operation = int.Parse(Console.ReadLine());
                 switch (operation)
                 {
